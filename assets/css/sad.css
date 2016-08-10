@@ -1,0 +1,44 @@
+
+
+
+body {
+   background: #9099A2 !important;
+   color: #373737;
+   font-family: 'Quicksand', sans-serif;
+}
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+.jumbotron {
+	background: #96858F !important;
+	color: white;
+	font-size: 50px;
+	padding-left: 60px;
+	font-family: 'Lato', sans-serif;
+	
+}
+
+
+
+#content {
+	width: 400px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle {
+	width: 400px; 
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#playlist {
+	width: 250px;
+	padding: 5px 15px;
+	float: left;
+}

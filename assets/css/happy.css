@@ -1,0 +1,51 @@
+
+
+
+body {
+   background: #fbc93d !important;
+   color: #373737;
+   font-family: 'Quicksand', sans-serif;
+}
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 20px auto;
+}
+
+.jumbotron {
+	background: #6cc0e5  !important;
+	color: white;
+	font-size: 50px;
+	padding-left: 60px;
+	
+}
+
+
+
+#content {
+	width: 400px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle {
+	width: 400px; 
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#playlist {
+	width: 250px;
+	padding: 5px 15px;
+	float: left;
+}
+
+
+
+.btn btn-danger {
+	color: #6cc0e5;
+	background-color: #6cc0e5;
+	border-color: #6cc0e5;
+}
