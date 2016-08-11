@@ -62,8 +62,6 @@ $(".submitURL").on("click", function(){
 	return false;
 });
 
-//var imageData = "http://www.faceplusplus.com/wp-content/themes/faceplusplus/assets/img/demo/thumbnail/1.jpg";
-
 //clear theme classes
 function clearClasses() {
 	$(".pagewrap").removeClass("happy-pagewrap");
@@ -160,10 +158,9 @@ function runFMA (mood){
 	
 	var queryURL = "https://freemusicarchive.org/api/get/tracks.json?api_key=" + FMAApiID + "&limit=50";
 	
-	
+	//set starting object
 	var trackNum = 49;
 	var trackFound = false;
-	console.log(queryURL);
 	
 	//get music data from API
 	$.ajax({
@@ -174,8 +171,10 @@ function runFMA (mood){
 		.done(function(FMA) {
 			console.log(FMA);
 			
+			//clear section
 			$(".playlist").html("");
 			
+			//count tracks added to section
 			var tracksAdded = 0;
 			
 			while(trackFound != true){
@@ -185,30 +184,34 @@ function runFMA (mood){
 				var genresNum = FMA.dataset[trackNum].track_genres.length - 1;
 				
 				while(genresNum >= 0){
+					
+					//get track genre
 					var genres = FMA.dataset[trackNum].track_genres[genresNum].genre_title;
 					
+					//check if genre is the same as mood
 					if(genres == mood){
 						trackToPlay = FMA.dataset[trackNum].track_url;
 						tracksAdded += 1;
 						newTrack = true;
 					}
-
+					
+					//set to next genre for track
 					genresNum = genresNum - 1;
 				}
 				
+				// add tack to section
 				if (newTrack == true){
-				$(".playlist").append("<a href='"+trackToPlay+"' target='_blank'><h1>Track " + tracksAdded + "</h1></a>");
+				$(".playlist").append("<a href='" + trackToPlay + "' target='_blank'><h1>Track " + tracksAdded + "</h1></a>");
 				}
 				
+				//change to next track to check
 				trackNum = trackNum - 1;
 				
+				// when all tracks are checked end loop
 				if(trackNum < 0){
 					trackFound = true;
-					var track = FMA.dataset[0].track_url;
 				}
 			}
-			
-			//var audio = "<audio autoplay loop controls><source src='http://freemusicarchive.org/" + trackToPlay + "' type='audio/mpeg'></audio>";
 			
         });	
 }
