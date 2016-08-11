@@ -12,134 +12,113 @@
 	<!-- Base CSS Style -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">		
 
-	<!-- Link to Moment.js -->
-	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
 
-		<!-- Jumbotron -->
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid vertical-center">
+    <h1 class="display-2"> CheerMeApp </h1>
+  </div>
 
-		<div class="jumbotron vertical-center">
-		    <h1 class="display-1"> CheerMeApp </h1>
-        <small class="text-muted">Music Makes The Mood</small>
-		</div>
-		
+  <div class="section1">
 
-<div class="section1">
+    <!-- <div class="container"> -->
 
-        <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="content">
+            <h4>Input URL of your photo below:</h4>
+            <!-- Form for inputting URL of photo -->
+            <form>
+             <input type="text" id="imgURL"> 
+             <input type="submit" value="submit" class="btn btn-outline-secondary btn-sm submitURL">
+           </form>
+         </div>
+       </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                  <div class="content">
-                    <h3>It's ok to be down...</h3>
-                    <p> Input URL of photo:</p>
-                    <form>
-                    <input type="text" id="imgURL"> 
-                    <br>
-                    <br>
-                    <input type="submit" value="submit" class="btn btn-outline-secondary btn-sm submitURL">
-                    </form>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                  <div class="middle">
-                    <h3> How are you feeling?</h3>
-                    <p> Feelings are feelings with songs and songs.</p>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                  <div class="playlist">
-                    <h3> Playlist will go here</h3>
-                    <p> Maybe some text? Maybe not!</p>
-                  </div>
-                </div>
-            </div>
-            <!-- /.row -->
-
+       <!-- Describe app and how it works -->
+       <div class="col-lg-4 col-md-4">
+        <div class="middle">
+          <h3> Turn your mood into music.</h3>
+          <p> CheerMeApp utilizes Face++ technology to turn your smile, or lack thereof into a 
+          Spotify playlist that fits your mood.</p>
         </div>
-        <!-- /.container -->
+      </div>
 
+      <!-- Spotify playlist will go here -->
+      <div class="col-lg-4 col-md-4">
+        <div class="playlist">
+          <h3> Playlist will go here</h3>
+          <p> Maybe some text? Maybe not!</p>
+        </div>
+      </div>
     </div>
-    <!-- /.section -->
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+</div>
+<!-- /.section -->
 
 
-<br>
+<!-- Brief Description -->
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <div class="section2">
+      <div class="container tim-container" style="max-width:100%; padding-top:100px">
+      <h2 class="text-center"> CheerMeApp <small class="subtitle"> Music Makes The Mood </small></h2>
+       <h4> Acknowledging your emotional state is a staple of good psychological and physiological well-being. </p> <a href="https://www.psychologytoday.com/blog/insight-therapy/201009/emotional-acceptance-why-feeling-bad-is-good" align="center"> <p align="center"> Emotional avoidance is harmful.</a> </p> As we are exploring new interaction methods between people and computers, we can explore the interaction of mind to brain... or 'Emotional Acceptance' </h4>
 
-<br>
+       <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>      
 
-<br>
-
-
-
-		<!-- Brief Description -->
-		<section class="container-fluid" id="section2">
-  		<div class="row">
-  		<div class="col-sm-8 col-sm-offset-2 text-center">
-		<!-- <div class="main"> -->
-    	<div class="container tim-container" style="max-width:800px; padding-top:100px">
-       <h1 class="text-center"> CheerMeApp <small class="subtitle"> Music Makes The Mood </small></h1>
-       <p> Acknowledging your emotional state is a staple of good psychological and physiological well-being. </p> <a href="https://www.psychologytoday.com/blog/insight-therapy/201009/emotional-acceptance-why-feeling-bad-is-good" align="center"> <p align="center"> Emotional avoidance is harmful.</a> </p> As we are exploring new interaction methods between people and computers, we can explore the interaction of mind to brain... or 'Emotional Acceptance' </p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
 
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
-
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>      
-               
-    </div>
-    <div class="space"></div>
+     </div>
+     <div class="space"></div>
 
 
-<br>
+     <br>
 
 
-    <!-- Footer --> 
- <div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left">  
-      <span class="glyphicon glyphicon-copyright-mark"></span> 2016 - CheerMeApp </p>
+     <!-- Footer --> 
+     <div class="navbar navbar-default navbar-fixed-bottom">
+      <div class="container">
+        <p class="navbar-text pull-left">  
+          <span class="glyphicon glyphicon-copyright-mark"></span> 2016 - CheerMeApp </p>
 
 
-      <!-- Link to modal -->
-      <a href="#ex1" rel="modal:open"> <button class="navbar-btn btn-danger btn pull-right"></a>
-       About </a>
+          <!-- Link to modal -->
+          <a href="#ex1" rel="modal:open"> <button class="navbar-btn btn-danger btn pull-right"></a>
+          About </a>
+        </div>
+      </div>
     </div>
 
+    <!-- Modal -->
+    <div id="ex1" style="display:none;">
+      <img src="assets/images/smile.jpg">  <a href="#" rel="modal:close"><p>Close</a> or press ESC</p>
+    </div>
+   
 
+    <!-- Main JS File -->
+    <script src="assets/javascript/main.js"></script>
 
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
 
+    <!-- Modal -->
+    <script src="assets/javascript/modal.js" type="text/javascript" charset="utf-8"></script>
 
-</div>
-</div>
-		
-
-
-
-
-
-
-
-		<!-- Modal -->
-		 <div id="ex1" style="display:none;">
-    <img src="assets/images/smile.jpg">  <a href="#" rel="modal:close"><p>Close</a> or press ESC</p>
-  </div>
-
-<!-- jQuery JS -->
-<script src="https://code.jquery.com/jquery.js"></script>
-
-<!-- Modal -->
-<script src="assets/javascript/main.js"></script>
-<!-- Modal -->
-<script src="assets/javascript/modal.js" type="text/javascript" charset="utf-8"></script>
-
-</body>
-</html>
+  </body>
+  </html>
 
