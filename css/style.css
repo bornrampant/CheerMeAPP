@@ -5,31 +5,33 @@ body {
    background-color: #E8E8E8;
    color: #373737;
    font-family: 'Quicksand', sans-serif;
+   text-align: center;
 }
 
 .jumbotron {
 	background-color: black;
   background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
   center center no-repeat;
-  color: white;
-  text-shadow: white 0.1em 0.1em 0.1em;	
-	padding-right: 50%;
-  padding-top:200px;
+  color: #FE2E2E;
+  padding-top:600px;
   min-height: 600px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 1000px;
 }
 
 
 .section1 {
-  color: white;
+   color: white;
 }
 
 .section2 {
+  width: 100%;
   background-color: black;
     color: white;
 }
 
 .content {
-	width: 400px;
+	width: 300px;
 	float: left;
 	padding: 5px 15px;
   color: black;
@@ -41,6 +43,7 @@ body {
 	padding: 5px 15px;
 	margin: 0px 5px 5px 5px;
   color: black;
+  /*background-color: black;*/
 }
 
 .playlist {
@@ -48,6 +51,39 @@ body {
 	padding: 5px 15px;
 	float: left;
   color: black;
+  /*background-color: black;*/
+}
+
+h2 {
+  color: red;
+}
+
+.section {
+  width: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -68,8 +104,13 @@ body {
 }*/
 
 .happy-jumbotron {
-  background: #6cc0e5  !important;
-  color: white;
+  background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
+  center center no-repeat;  
+  padding-left: 5%;
+  padding-top:200px;
+  min-height: 600px; 
+  font-family: 'Raleway', sans-serif;
+  color: #fbc93d;
   font-size: 50px;
   padding-left: 60px;  
 }
@@ -79,14 +120,15 @@ body {
 }
 
 .section2 {
-  background-color: black;
-    color: white;
+  color: white;
 }
 
 .happy-content {
   width: 400px;
   float: left;
   padding: 5px 15px;
+  color: white;
+  background-color: #6cc0e5;
 }
 
 .happy-middle {
@@ -119,11 +161,16 @@ body {
 }*/
 
 .sad-jumbotron {
-  background: #96858F !important;
-  color: white;
+  background-color: black;
+  background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
+  center center no-repeat;  
+  padding-left: 5%;
+  padding-top:200px;
+  min-height: 600px; 
+  font-family: 'Raleway', sans-serif;
+  color: #2c3e50;
   font-size: 50px;
-  padding-left: 60px;
-  font-family: 'Lato', sans-serif;  
+  padding-left: 60px;  
 }
 
 .section1 {
@@ -140,6 +187,8 @@ body {
   width: 400px;
   float: left;
   padding: 5px 15px;
+  color: white;
+  background-color: black;
 }
 
 #sad-middle {
@@ -173,7 +222,7 @@ body {
   background-color: rgba(0,0,0,0.75);
   text-align: center;
 }
-.blocker:before{
+.blocker.before{
   content: "";
   display: inline-block;
   height: 100%;
