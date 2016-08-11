@@ -24,8 +24,7 @@ $(".submitURL").on("click", function(){
 	//set to lower case for checks
 	var isImage = imgURL.toLowerCase();
 	
-	console.log(isImage);
-	
+	//check if input is http\s address
 	var isFileType = isImage.split(":");
 	
 	if (isFileType[0] == "http"){
@@ -38,7 +37,7 @@ $(".submitURL").on("click", function(){
 	
 	console.log(isFileType);
 	
-	//check if file is image type
+	//check if file is a image type
 	var isFileType = isImage.split(".");
 	
 	if (isFileType[isFileType.length - 1] == "jpg"){
