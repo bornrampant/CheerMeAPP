@@ -2,12 +2,11 @@
 var faceApiKey  = "88ee016e54cec327a568b7a6c13c893b";
 var faceApiSecret = "L49upHZ3wsjLB7y_Q1YZhT-zi1fyrxYp";
 //spotify access keys
-var spotifyApiID = "5a202c5e7bc24cc98a23a5a8130e5f4f";
-var spotifyApiSecret = "8b12b7a08c5e42449127d6c2ce411c26";
+var FMAApiID = "EY3GTFSU7C99N1R7";
 
 //string to hold playlist api call
 var mood = "";
-
+var trackToPlay = "";
 
 //input user image url
 $(".submitURL").on("click", function(){
@@ -25,8 +24,7 @@ $(".submitURL").on("click", function(){
 	//set to lower case for checks
 	var isImage = imgURL.toLowerCase();
 	
-	console.log(isImage);
-	
+	//check if input is http\s address
 	var isFileType = isImage.split(":");
 	
 	if (isFileType[0] == "http"){
@@ -39,7 +37,7 @@ $(".submitURL").on("click", function(){
 	
 	console.log(isFileType);
 	
-	//check if file is image type
+	//check if file is a image type
 	var isFileType = isImage.split(".");
 	
 	if (isFileType[isFileType.length - 1] == "jpg"){
@@ -62,8 +60,6 @@ $(".submitURL").on("click", function(){
 	
 	return false;
 });
-
-//var imageData = "http://www.faceplusplus.com/wp-content/themes/faceplusplus/assets/img/demo/thumbnail/1.jpg";
 
 //clear theme classes
 function clearClasses() {
@@ -126,7 +122,7 @@ function runFacePlusPlus(imageData) {
 			
 			//take action based on total smiliness in picture
 			if (smileAvg >= 66){
-				mood = "/v1/users/" + spotifyApiID + "/playlists/4hfsKDh1xp5SBsJGJWt4pd";
+				mood = "Electronic";
 				$(".section1").addClass("happy-section1");
 				$(".jumbotron").addClass("happy-jumbotron");
 				$(".content").addClass("happy-content");
@@ -136,7 +132,7 @@ function runFacePlusPlus(imageData) {
 				console.log("Happy: " + smileAvg);
 			}
 			else if (smileAvg <= 33){
-				mood = "/v1/users/" + spotifyApiID + "/playlists/{playlist_id}";
+				mood = "Blues";
 				$(".section1").addClass("sad-section1");
 				$(".jumbotron").addClass("sad-jumbotron");
 				$(".content").addClass("sad-content");
@@ -146,36 +142,77 @@ function runFacePlusPlus(imageData) {
 				console.log("Sad: " + smileAvg);
 			}
 			else{
-				mood = "/v1/users/" + spotifyApiID + "/playlists/{playlist_id}";
+				mood = "Classical";
 				console.log("Neutral: " + smileAvg);
 			}
 			
-			runSpotify(mood);
+			//get music tracks
+			runFMA(mood);
         });
 
 }
 
-function runSpotify (mood){
+function runFMA (mood){
 	
-	var queryURL = "https://accounts.spotify.com/authorize/?client_id=" + spotifyApiID + "&response_type=code&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=user-read-private%20user-read-email&state=34fFs29kd09"
 	
-	//var queryURL = "https://api.spotify.com" + mood;
+	var queryURL = "https://freemusicarchive.org/api/get/tracks.json?api_key=" + FMAApiID + "&limit=50";
 	
-	console.log(queryURL);
+	//set starting object
+	var trackNum = 49;
+	var trackFound = false;
 	
+	//get music data from API
 	$.ajax({
+			dataType: "json",
             url: queryURL,
             method: "GET"
         })
-		.done(function(Spotify) {
-			console.log(Spotify);
-			var track = Spotify.tracks[0].track.uri;
-			console.log(track);
-        });
-	
-	
-	
-	$(".player").html("<iframe src='https://embed.spotify.com/?uri=" + track + "' width='300' height='380' frameborder='0' allowtransparency='true'></iframe>")
+		.done(function(FMA) {
+			console.log(FMA);
+			
+			//clear section
+			$(".playlist").html("");
+			
+			//count tracks added to section
+			var tracksAdded = 0;
+			
+			while(trackFound != true){
+				
+				var newTrack = false;
+				
+				var genresNum = FMA.dataset[trackNum].track_genres.length - 1;
+				
+				while(genresNum >= 0){
+					
+					//get track genre
+					var genres = FMA.dataset[trackNum].track_genres[genresNum].genre_title;
+					
+					//check if genre is the same as mood
+					if(genres == mood){
+						trackToPlay = FMA.dataset[trackNum].track_url;
+						tracksAdded += 1;
+						newTrack = true;
+					}
+					
+					//set to next genre for track
+					genresNum = genresNum - 1;
+				}
+				
+				// add tack to section
+				if (newTrack == true){
+				$(".playlist").append("<a href='" + trackToPlay + "' target='_blank'><h1>Track " + tracksAdded + "</h1></a>");
+				}
+				
+				//change to next track to check
+				trackNum = trackNum - 1;
+				
+				// when all tracks are checked end loop
+				if(trackNum < 0){
+					trackFound = true;
+				}
+			}
+			
+        });	
 }
 
 
