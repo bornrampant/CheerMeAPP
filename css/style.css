@@ -19,9 +19,6 @@ body {
   font-size: 24px;
 }
 
-
-
-
 .section1 {
    color: white;
 }
@@ -94,15 +91,14 @@ a:active {
               /* N E U T R A L */
 
 .happy-jumbotron {
+  background-color: black;
   background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
-  center center no-repeat;  
-  padding-left: 5%;
-  padding-top:200px;
-  min-height: 600px; 
-  font-family: 'Raleway', sans-serif;
+  center center no-repeat;
   color: #fbc93d;
-  font-size: 50px;
-  padding-left: 60px;  
+  padding-top:600px;
+  min-height: 600px; 
+  font-family: 'Racing Sans One', cursive;
+  font-size: 24px;
 }
 
 .section1 {
