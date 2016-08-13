@@ -88,7 +88,7 @@ a:active {
 
 
 
-              /* N E U T R A L */
+              /* H A P P Y */
 
 .happy-jumbotron {
   background-color: black;
@@ -101,11 +101,11 @@ a:active {
   font-size: 24px;
 }
 
-.section1 {
+.happy-section1 {
   color: white;
 }
 
-.section2 {
+.happy-section2 {
   color: white;
 }
 
@@ -137,7 +137,7 @@ a:active {
 
 .sad-jumbotron {
   background-color: black;
-  background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
+  background: url("https://static.pexels.com/photos/24146/pexels-photo.jpg")
   center center no-repeat;  
   padding-left: 5%;
   padding-top:200px;
@@ -148,11 +148,11 @@ a:active {
   padding-left: 60px;  
 }
 
-.section1 {
+.sad-section1 {
   color: white;
 }
 
-.section2 {
+.sad-section2 {
   background-color: black;
     color: white;
 }
@@ -162,7 +162,7 @@ a:active {
   width: 400px;
   float: left;
   padding: 5px 15px;
-  color: white;
+  color: #2c3e50;
   background-color: black;
 }
 
@@ -171,12 +171,14 @@ a:active {
   float: left;
   padding: 5px 15px;
   margin: 0px 5px 5px 5px;
+  color: #2c3e50;
 }
 
 #sad-playlist {
   width: 250px;
   padding: 5px 15px;
   float: left;
+  color: #2c3e50;
 }
 
 
