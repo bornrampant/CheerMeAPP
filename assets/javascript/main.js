@@ -1,7 +1,7 @@
 //faceplusplus access keys
 var faceApiKey  = "88ee016e54cec327a568b7a6c13c893b";
 var faceApiSecret = "L49upHZ3wsjLB7y_Q1YZhT-zi1fyrxYp";
-//spotify access keys
+//FMA access keys
 var FMAApiID = "EY3GTFSU7C99N1R7";
 
 //string to hold playlist api call
