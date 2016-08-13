@@ -1,35 +1,37 @@
 
-/* N E U T R A L */
+                /* N E U T R A L */
 
 body {
    background-color: #E8E8E8;
    color: #373737;
    font-family: 'Quicksand', sans-serif;
+   text-align: center;
 }
 
 .jumbotron {
 	background-color: black;
   background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
   center center no-repeat;
-  color: white;
-  text-shadow: white 0.1em 0.1em 0.1em;	
-	padding-right: 50%;
-  padding-top:200px;
+  color: #FE2E2E;
+  padding-top:600px;
   min-height: 600px; 
+  font-family: 'Racing Sans One', cursive;
+  font-size: 24px;
 }
 
-
 .section1 {
-  color: white;
+   color: white;
 }
 
 .section2 {
+  width: 100%;
   background-color: black;
-    color: white;
-}
+  color: white;
+  padding-bottom: 50px;
+ }
 
 .content {
-	width: 400px;
+	width: 300px;
 	float: left;
 	padding: 5px 15px;
   color: black;
@@ -50,43 +52,69 @@ body {
   color: black;
 }
 
+h2, h3 {
+  color: red;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.section {
+  width: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+    color: white;
+    text-decoration: none;
+}
 
 
-/*            H A P P Y              */
 
 
-/*body {
-   background: #fbc93d !important;
-   color: #373737;
-   font-family: 'Quicksand', sans-serif;
-}*/
-
-/*.happy-pagewrap {
-  padding: 5px;
-  width: 960px;
-  margin: 20px auto;
-}*/
+              /* H A P P Y */
 
 .happy-jumbotron {
-  background: #6cc0e5  !important;
-  color: white;
-  font-size: 50px;
-  padding-left: 60px;  
-}
-
-.section1 {
-  color: white;
-}
-
-.section2 {
   background-color: black;
-    color: white;
+  background: url("https://static.pexels.com/photos/65121/pexels-photo-65121.jpeg")
+  center center no-repeat;
+  color: #fbc93d;
+  padding-top:600px;
+  min-height: 600px; 
+  font-family: 'Racing Sans One', cursive;
+  font-size: 24px;
+}
+
+.happy-section1 {
+  color: white;
+}
+
+.happy-section2 {
+  color: white;
 }
 
 .happy-content {
   width: 400px;
   float: left;
   padding: 5px 15px;
+  color: white;
+  background-color: #6cc0e5;
 }
 
 .happy-middle {
@@ -104,33 +132,27 @@ body {
 
 
 
-/*    S A D     */
+                      /*    S A D     */
 
-/*body {
-   background: #9099A2 !important;
-   color: #373737;
-   font-family: 'Quicksand', sans-serif;
-}*/
-
-/*.sad-pagewrap {
-  padding: 5px;
-  width: 960px;
-  margin: 20px auto;
-}*/
 
 .sad-jumbotron {
-  background: #96858F !important;
-  color: white;
+  background-color: black;
+  background: url("https://static.pexels.com/photos/24146/pexels-photo.jpg")
+  center center no-repeat;  
+  padding-left: 5%;
+  padding-top:200px;
+  min-height: 600px; 
+  font-family: 'Raleway', sans-serif;
+  color: #2c3e50;
   font-size: 50px;
-  padding-left: 60px;
-  font-family: 'Lato', sans-serif;  
+  padding-left: 60px;  
 }
 
-.section1 {
+.sad-section1 {
   color: white;
 }
 
-.section2 {
+.sad-section2 {
   background-color: black;
     color: white;
 }
@@ -140,6 +162,8 @@ body {
   width: 400px;
   float: left;
   padding: 5px 15px;
+  color: #2c3e50;
+  background-color: black;
 }
 
 #sad-middle {
@@ -147,12 +171,14 @@ body {
   float: left;
   padding: 5px 15px;
   margin: 0px 5px 5px 5px;
+  color: #2c3e50;
 }
 
 #sad-playlist {
   width: 250px;
   padding: 5px 15px;
   float: left;
+  color: #2c3e50;
 }
 
 
@@ -160,7 +186,7 @@ body {
 
 
 
-/* Modal CSS */
+                      /* Modal CSS */
 .blocker {
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -173,7 +199,7 @@ body {
   background-color: rgba(0,0,0,0.75);
   text-align: center;
 }
-.blocker:before{
+.blocker.before{
   content: "";
   display: inline-block;
   height: 100%;
@@ -231,3 +257,16 @@ body {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
