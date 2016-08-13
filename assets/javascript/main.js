@@ -159,7 +159,6 @@ function runFMA (mood){
 	
 	//set starting object
 	var trackNum = 49;
-	var trackFound = false;
 	
 	//get music data from API
 	$.ajax({
@@ -176,10 +175,13 @@ function runFMA (mood){
 			//count tracks added to section
 			var tracksAdded = 0;
 			
-			while(trackFound != true){
+			//end after last track is tested
+			while(trackNum >= 0){
 				
+				//was this track the correct genre
 				var newTrack = false;
 				
+				//get number of genres for track
 				var genresNum = FMA.dataset[trackNum].track_genres.length - 1;
 				
 				while(genresNum >= 0){
@@ -198,18 +200,13 @@ function runFMA (mood){
 					genresNum = genresNum - 1;
 				}
 				
-				// add tack to section
+				// add tack to section if genre was correct type
 				if (newTrack == true){
 				$(".playlist").append("<a href='" + trackToPlay + "' target='_blank'><h1>Track " + tracksAdded + "</h1></a>");
 				}
 				
 				//change to next track to check
 				trackNum = trackNum - 1;
-				
-				// when all tracks are checked end loop
-				if(trackNum < 0){
-					trackFound = true;
-				}
 			}
 			
         });	
